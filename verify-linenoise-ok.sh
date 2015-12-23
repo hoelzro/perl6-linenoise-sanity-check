@@ -18,7 +18,9 @@ perl6 bootstrap.pl
 panda install Linenoise
 
 tmux -L non-default new-session -d -s perl6 perl6
+sleep 10
 tmux -L non-default send-keys s tab
+sleep 10
 tmux -L non-default capture-pane
 tmux -L non-default save-buffer -b 0 /tmp/out
 cat /tmp/out
