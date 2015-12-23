@@ -19,4 +19,6 @@ panda install Linenoise
 
 tmux -L non-default new-session -d -s perl6 perl6
 tmux -L non-default send-keys s tab
-tmux -L non-default capture-pane -p | grep -q samecase || (echo "tab completion seems to be broken" && false)
+tmux -L non-default capture-pane -b 0
+tmux -L non-default save-buffer /tmp/out
+grep -q samecase /tmp/out || (echo "tab completion seems to be broken" && false)
