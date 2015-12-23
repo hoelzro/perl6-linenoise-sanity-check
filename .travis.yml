@@ -1,2 +1,7 @@
 language: c
+
+before_install:
+    - sudo apt-get update -qq
+    - sudo apt-get install -qq tmux
+
 script: sh verify-linenoise-ok.sh
