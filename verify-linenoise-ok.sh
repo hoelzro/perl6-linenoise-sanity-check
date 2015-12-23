@@ -21,6 +21,7 @@ export PATH=$PATH:/tmp/nom/bin:/tmp/nom/share/perl6/site/bin/
 MANPAGER=cat man tmux
 tmux -L non-default new-session -d -s cat cat
 tmux -L non-default send-keys s tab
-tmux -L non-default capture-pane -b 0
+tmux -L non-default capture-pane
+tmux -L non-default list-buffers
 tmux -L non-default save-buffer -b 0 /tmp/out
 grep -q samecase /tmp/out || (echo "tab completion seems to be broken" && false)
