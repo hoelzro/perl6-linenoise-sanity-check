@@ -1,0 +1,2 @@
+language: c
+script: sh verify-linenoise-ok.sh
