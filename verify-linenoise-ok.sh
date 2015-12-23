@@ -2,6 +2,8 @@
 
 set -e -x
 
+tmux -V
+
 export PATH=$PATH:/tmp/nom/bin:/tmp/nom/share/perl6/site/bin/
 
 git clone https://github.com/rakudo/rakudo
