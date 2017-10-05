@@ -5,15 +5,15 @@ set -e -x
 export PATH=$PATH:/tmp/nom/bin:/tmp/nom/share/perl6/site/bin/
 
 git clone https://github.com/rakudo/rakudo
-git clone https://github.com/tadzik/panda
+git clone https://github.com/ugexe/zef
 
 cd rakudo
 perl Configure.pl --prefix=/tmp/nom --gen-moar && make install
 
-cd ../panda
-perl6 bootstrap.pl
+cd ../zef
+perl6 -Ilib bin/zef install .
 
-panda install Linenoise
+zef install Linenoise
 
 tmux -L non-default new-session -d -s perl6 perl6
 sleep 10
