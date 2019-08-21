@@ -20,6 +20,6 @@ sleep 10
 tmux -L non-default send-keys s tab
 sleep 10
 tmux -L non-default capture-pane
-tmux -L non-default save-buffer -b 0 /tmp/out
+tmux -L non-default save-buffer -b buffer0000 /tmp/out
 cat /tmp/out
 grep -q samecase /tmp/out || (echo "tab completion seems to be broken" && false)
